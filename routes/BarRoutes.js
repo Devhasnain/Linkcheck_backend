@@ -46,10 +46,10 @@ router.post('/bars', upload.any(), async (req, res) => {
         let saveImage = await uploadImage.save();
 
         if (element.fieldname === 'bar_image') {
-          savedBar.image = `https://phpstack-1080450-3997025.cloudwaysapps.com/images/${saveImage._id}`;
+          savedBar.image = `https://linkcheckbackend-production.up.railway.app/image/${saveImage._id}`;
           await savedBar.save();
         } else {
-          savedBar.userimage = `https://phpstack-1080450-3997025.cloudwaysapps.com/images/${saveImage._id}`;
+          savedBar.userimage = `https://linkcheckbackend-production.up.railway.app/image/${saveImage._id}`;
           await savedBar.save();
         }
 
