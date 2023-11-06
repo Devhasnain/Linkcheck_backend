@@ -17,9 +17,9 @@ const barSchema = new mongoose.Schema({
   longitude: Number,
   latitude: Number,
   rating: Number
- 
+
 });
 
-const Bar = mongoose.model('Bar', barSchema);
+const Bar = mongoose.models.Bar || mongoose.model('Bar', barSchema);
 
 module.exports = Bar;
